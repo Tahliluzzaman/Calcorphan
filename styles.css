@@ -1,0 +1,133 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: linear-gradient(135deg, #f3e5df, #e8d2c4, #f8eee8);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 380px;
+    padding: 22px;
+    border-radius: 30px;
+    background: rgba(255,250,246,0.82);
+    box-shadow: 0 15px 40px #70433130;
+    border: 2px solid #fffaf6;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #804b43;
+}
+
+.header h2 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 12px;
+    color: #a47764;
+}
+
+.display {
+    background: #f4e9e1;
+    border: 2px solid #dfc5b5;
+    border-radius: 20px;
+    padding: 16px;
+    min-height: 95px;
+    margin-bottom: 17px;
+    text-align: right;
+    overflow: hidden;
+}
+
+#expression {
+    min-height: 24px;
+    font-size: 15px;
+    color: #a47764;
+    overflow-wrap: anywhere;
+}
+
+#result {
+    font-size: 30px;
+    font-weight: bold;
+    color: #713d36;
+    overflow-wrap: anywhere;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+button {
+    min-width: 0;
+    height: 53px;
+    border: none;
+    border-radius: 17px;
+    background: #ead9cd;
+    color: #70483c;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #d5b9a8;
+    transition: transform .1s, filter .1s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #d5b9a8;
+    filter: brightness(.97);
+}
+
+button.function {
+    background: #e2d1c4;
+    color: #70483c;
+    font-size: 14px;
+}
+
+button.operator {
+    background: #c99c88;
+    color: #fffaf6;
+}
+
+button.clear {
+    background: #9e6258;
+    color: #ffffff;
+}
+
+button.equal {
+    background: linear-gradient(135deg, #a65f58, #805044);
+    color: white;
+    box-shadow: 0 4px 0 #704331;
+}
+
+button.zero {
+    grid-column: span 2;
+}
+
+.footer {
+    text-align: center;
+    color: #a47764;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+@media (max-width: 350px) {
+    .calculator { padding: 14px; }
+    .buttons { gap: 7px; }
+    button { height: 47px; font-size: 15px; }
+}
